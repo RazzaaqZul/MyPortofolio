@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* background-color: chartreuse; */
+  font-family: Poppins;
+}
+
+body {
+  overflow-x: hidden;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  border-style: solid;
+  font-weight: 600;
+  position: -webkit-sticky; /* For browser that only support -webkit-sticky */
+  position: sticky; /* For modern browser */
+  top: 0;
+  background-color: white;
+  padding: 10px 4px;
+  z-index: 4;
+}
+
+/* 	Selects all <li> elements inside <nav> elements */
+nav ul {
+  padding: 10px 80px 0px 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+  gap: 30px;
+}
+
+nav ul li {
+  transition: 600ms;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  color: deeppink;
+  animation-duration: 100ms;
+  transition-duration: 500ms;
+}
+
+.nav_item .active {
+  color: deeppink;
+  animation-duration: 100ms;
+  transition-duration: 500ms;
+}
+
+.nav_left {
+  font-weight: 800;
+  font-size: x-large;
+}
+
+.container_home {
+  margin: 20px 80px 0px 80px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  height: 100%;
+  margin-top: 30px;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.elips {
+  background-color: #fafc63;
+  transform: rotate(145deg) scaleX(1);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  width: 50%;
+  height: 70%;
+  z-index: 3;
+  position: relative;
+  right: 30%;
+  top: 2%;
+  animation: moveElips 8s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes moveElips {
+  0% {
+    background-color: #6eee91;
+  }
+  50% {
+    background-color: #5fcaf1;
+  }
+  100% {
+    background-color: #fafc63;
+  }
+}
+
+.segitiga {
+  background-color: #6dff94;
+  transform: rotate(175deg) scaleX(1);
+  clip-path: polygon(100% 100%, 0% 100%, 50% 0%);
+  width: 50%;
+  height: 70%;
+  position: absolute;
+  right: 30%;
+  top: 2%;
+  animation: moveSegitiga 8s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes moveSegitiga {
+  0% {
+    background-color: #5fcaf1;
+  }
+  50% {
+    background-color: #fcff5c;
+  }
+  100% {
+    background-color: #6dff94;
+  }
+}
+
+.kotak {
+  background-color: #5fcaf1;
+  border-radius: 30px;
+  transform: rotate(210deg) scaleX(1);
+  width: 50%;
+  height: 80%;
+  position: absolute;
+  left: 40%;
+  top: 14%;
+  z-index: 2;
+  animation: moveKotak 8s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes moveKotak {
+  0% {
+    background-color: #fcff5c;
+  }
+  50% {
+    background-color: #6dff94;
+  }
+  100% {
+    background-color: #5fcaf1;
+  }
+}
+
+.tabung {
+  background-color: rgb(203, 255, 255);
+  border-radius: 20px;
+  width: 60%;
+  height: 7%;
+  left: 15%;
+  z-index: 4;
+}
+
+.container_shape {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  top: 0;
+}
+
+.header_name {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.header_desc {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.container_animate {
+  background: linear-gradient(
+    90deg,
+    #ffd0d0 0%,
+    #f2f7b7 41.59%,
+    #b9f788 69.25%,
+    #bcedff 100%
+  );
+  width: 100%;
+  height: 12vh;
+  margin: 4px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transform: rotate(2deg) scaleX(1);
+}
+
+.container_scroll {
+  display: inline-flex;
+  /* display: inline-flex; */
+}
+
+.container_slide {
+  background-color: black;
+
+  width: max-content;
+  color: white;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 30px;
+  font-weight: 500;
+  animation: slide 15s infinite linear;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.container_aboutme {
+  /* background-color: #d4f4dc; */
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.container_contentAboutMe {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 50px;
+}
+
+/* .mini_nav li:hover {
+  border-bottom: 5px solid red;
+  animation: MoveBorder 2s ease 0s 1 normal forwards;
+} */
+
+@keyframes MoveBorder {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.nav_active {
+  color: deeppink;
+}
+
+/* .nav_active::after {
+  content: "";
+  background-color: brown;
+  width: 100%;
+  transition: all;
+  transition-duration: 300ms;
+} */
+.nav_doesnt_active {
+  cursor: pointer;
+  position: relative;
+}
+.nav_doesnt_active::after {
+  content: "";
+  width: 0rem /* 32px */;
+  height: 2px;
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+}
+
+.container_project {
+  width: 100%;
+  height: 100%;
+
+  padding: 0px 80px 0px 80px;
+}
+
+.animation_image {
+  animation: myAnima 7s ease 0s 1 normal forwards;
+}
+
+.animation_image_exit {
+  animation: myAnimaExit 7s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnimaExit {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes myAnima {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.container_footer {
+  padding: 10px;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(
+    180deg,
+    rgba(219, 253, 228, 0) 0%,
+    rgba(173, 255, 228, 0.41) 40.77%,
+    #ceeaf5 100%
+  );
+}
+
+.animate_nav_mobile {
+  animation: dropdown 500ms ease 0s 1 normal forwards;
+}
+
+@keyframes dropdown {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+  }
+
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
+}
