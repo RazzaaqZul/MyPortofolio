@@ -6,8 +6,10 @@ import { DATAPROJECTS } from "./DataProject";
 const Project = () => {
   return (
     <>
-      <div className="font-bold text-[3rem]">Latest Projects</div>
-      <div className="container_card mt-[2%] flex justify-center items-center gap-8 flex-wrap">
+      <div className="font-bold text-[3rem] max-sm:text-[2rem]">
+        Latest Projects
+      </div>
+      <div className="container_card mt-[2%]  flex justify-center items-center gap-8 flex-wrap ...">
         {DATAPROJECTS.map((item, index) => {
           return (
             <CardProject
@@ -16,6 +18,7 @@ const Project = () => {
               image={item.image}
               language={item.language}
               link={item.link}
+              deploy={item.deploy}
             />
           );
         })}

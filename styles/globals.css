@@ -211,6 +211,7 @@ nav ul li:hover {
 
 .container_scroll {
   display: inline-flex;
+  overflow-x: hidden;
   /* display: inline-flex; */
 }
 

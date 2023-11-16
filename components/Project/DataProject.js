@@ -24,8 +24,8 @@ export const DATAPROJECTS = [
       },
     ],
     language: "HTML, CSS, TailwindCSS, JavaScript, React.js",
-
     link: "https://github.com/RazzaaqZul/bcc-project-FE",
+    deploy: "https://bcc-project-fe-qzyz.vercel.app/",
   },
   {
     name: "Sobat KRS",
@@ -53,6 +53,7 @@ export const DATAPROJECTS = [
     ],
     language: "HTML, CSS, TailwindCSS, JavaScript, React.js",
     link: "https://github.com/KBMCI",
+    deploy: "",
   },
 
   {
@@ -81,5 +82,6 @@ export const DATAPROJECTS = [
     ],
     language: "HTML, CSS, TailwindCSS, JavaScript, React.js",
     link: "https://github.com/RazzaaqZul/bcc-project-FE",
+    deploy: "",
   },
 ];

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-const CardProject = ({ name, image, language, link }) => {
+const CardProject = ({ name, image, language, link, deploy }) => {
   const [imageIndex, setImageIndex] = useState(1);
   const [animation, setAnimation] = useState(false);
   useEffect(() => {
@@ -20,7 +20,7 @@ const CardProject = ({ name, image, language, link }) => {
 
   return (
     <div>
-      <div className="hover:shadow-2xl hover:-translate-y-2 hover:shadow-amber-300 duration-200 ... container_card bg-neutral-50 shadow-2xl  w-[100%] h-[450px] flex justify-center items-center flex-col px-10 rounded-2xl gap-4">
+      <div className="hover:shadow-2xl hover:-translate-y-2 hover:shadow-amber-300 duration-200 ... container_card bg-neutral-50 shadow-2xl  w-[100%] h-[450px] flex justify-center items-center flex-col px-10 rounded-2xl gap-4 ...">
         <div className="image_card ">
           <Image
             src={image[imageIndex].src}
@@ -38,10 +38,21 @@ const CardProject = ({ name, image, language, link }) => {
             }}
           />
         </div>
+
         <div className="title_card font-bold text-xl">{name}</div>
+
         <div className="language_card font-normal italic ">
           <p className="text-center">{language}</p>
         </div>
+        <a
+          href={deploy}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-normal text-base cursor-pointer hover:text-blue-500 duration-300 hover:scale-110   text-black underline"
+        >
+          Production Deployment
+        </a>
+
         <a
           href={link}
           target="_blank"

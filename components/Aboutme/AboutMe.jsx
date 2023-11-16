@@ -61,9 +61,9 @@ const AboutMe = () => {
       <h1 className="font-bold flex justify-center items-center text-3xl mt-20">
         About Me
       </h1>
-      <div className=" container_contentAboutMe lg:pt-[50px] lg:pr-[80px]  lg:pl-[80px] ">
+      <div className=" container_contentAboutMe lg:pt-[50px] lg:pr-[80px]  lg:pl-[80px]  ">
         <div className="container_nav relative bottom-0   ">
-          <nav className="mini_nav flex justify-center items-center gap-9 z-[2] basis-2/5 ">
+          <nav className="mini_nav flex justify-center items-center gap-9 z-[2] basis-2/5 max-sm:gap-3 ">
             {MININAVBAR.map((item, index) => (
               <li
                 key={index}
@@ -79,7 +79,10 @@ const AboutMe = () => {
           </nav>
           <div className="max-w-[400px]">
             {filteredItem.map((items) => (
-              <div key={items.id} className="  mt-2  w-[100%]  h-[200px]">
+              <div
+                key={items.id}
+                className="  mt-2  w-[100%]  h-[200px] max-sm:w-[80%] max-sm:ml-[10%]"
+              >
                 {items.itemList.map((item, index) => (
                   <div key={index + 1} className="py-3">
                     <li className="font-bold  ">{item.activity}</li>
