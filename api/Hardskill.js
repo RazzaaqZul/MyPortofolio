@@ -41,11 +41,11 @@ export const HARDSKILL = [
   {
     icon: (
       <Image
-        src="/icon/logo_javascript.png"
+        src="/icon/logo_fix_js.png"
         width={70}
         height={100}
         alt="javascript"
-        className="w-auto  "
+        className="w-auto"
       />
     ),
     name: "javascript",
