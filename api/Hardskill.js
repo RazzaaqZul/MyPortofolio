@@ -44,7 +44,7 @@ export const HARDSKILL = [
         src="/icon/logo_javascript.png"
         width={70}
         height={100}
-        alt="css"
+        alt="javascript"
         className="w-auto  "
       />
     ),
