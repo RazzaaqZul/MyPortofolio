@@ -6,10 +6,24 @@ import { HARDSKILL } from "../../api/Hardskill";
 
 const HardskillSlide = () => {
   const [imageIndex, setImageIndex] = useState(0);
+  const [isActive, setActive] = useState(false);
 
-  // useEffect(() => {
-  //   console.log(imageIndex);
-  // }, [setImageIndex]);
+  useEffect(() => {
+    // Fungsi untuk menentukan apakah layar adalah tablet atau dekstop
+    const handleResize = () => {
+      const isTablet = window.innerWidth <= 768; // Ganti dengan nilai batas pixel untuk tablet
+      setActive(isTablet);
+    };
+
+    // Panggil fungsi handleResize saat komponen dimount dan ukuran layar berubah
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Bersihkan event listener pada saat komponen di-unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const NextArrow = ({ onClick }) => {
     return (
@@ -19,7 +33,7 @@ const HardskillSlide = () => {
         height={100}
         alt="css"
         onClick={onClick}
-        className="arrow next max-sm:hidden"
+        className="arrow next ... max-sm:w-7 "
       />
     );
   };
@@ -32,7 +46,7 @@ const HardskillSlide = () => {
         height={100}
         alt="css"
         onClick={onClick}
-        className="arrow prev max-sm:hidden"
+        className="arrow prev ... max-sm:w-7"
       />
     );
   };
@@ -42,7 +56,7 @@ const HardskillSlide = () => {
     dots: false,
     // infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: isActive ? 3 : 5,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: 0,

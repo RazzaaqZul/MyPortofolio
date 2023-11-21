@@ -4,21 +4,32 @@ import { Link } from "react-scroll";
 import { TiThMenu } from "react-icons/ti";
 
 const Nav = () => {
-  const [active, setActive] = useState("home"); // Default active link is "home"
   const [isHamburger, setIsHamburger] = useState(false);
-  const sectionRefs = {
-    home: useRef(),
-    aboutme: useRef(),
-    project: useRef(),
-    contact: useRef(),
-  };
+  const [isScroll, setIsScroll] = useState(false);
 
-  // useEffect(() => {
-  //   console.log(isHamburger);
-  // }, [isHamburger]);
+  useEffect(() => {
+    const handleScroll = () => {
+      // Additional logic related to scrolling, if needed
+      if (window.pageYOffset > 100) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
 
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Call handleScroll immediately to handle the initial state
+    handleScroll();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [setIsScroll, isScroll]);
   return (
-    <nav className="nav ">
+    <nav className={`nav ${isScroll && `sticky bg_scroll  `} `}>
       <ul className="nav_left">
         <li className="nav_list ">MRZ</li>
       </ul>
@@ -64,13 +75,7 @@ const Nav = () => {
           </Link>
         </li>
 
-        <li
-          id="contact"
-          className={`nav_list ${
-            active === sectionRefs.contact.id ? "text-pink-500" : ""
-          }`}
-          ref={sectionRefs.contact}
-        >
+        <li id="contact" className={`nav_list `}>
           Contact
         </li>
       </ul>
@@ -83,8 +88,12 @@ const Nav = () => {
           style={{ userSelect: "none" }}
         />
         {isHamburger && (
-          <div className="animate_nav_mobile absolute bg-white shadow-2xl p-6 rounded-b-3xl top-14 flex justify-start flex-col items-start gap-2 ">
-            <li className="nav_item ">
+          <div
+            className={`animate_nav_mobile z-20 absolute  ${
+              isScroll ? `bg_scroll_mobile` : `bg-white `
+            } shadow-2xl p-6 rounded-b-3xl top-14 flex justify-start flex-col items-start gap-2 `}
+          >
+            <li className="nav_item   ">
               <Link
                 activeClass="active"
                 to="home"
@@ -124,13 +133,7 @@ const Nav = () => {
               </Link>
             </li>
 
-            <li
-              id="contact"
-              className={`nav_list ${
-                active === sectionRefs.contact.id ? "text-pink-500" : ""
-              }`}
-              ref={sectionRefs.contact}
-            >
+            <li id="contact" className={`nav_list`}>
               Contact
             </li>
           </div>

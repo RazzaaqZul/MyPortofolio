@@ -9,7 +9,7 @@ const CardProject = ({ name, image, language, link, deploy }) => {
     const sliderInterval = setInterval(() => {
       setImageIndex((prevIndex) => (prevIndex + 1) % image.length);
       setAnimation(!animation);
-    }, 7000);
+    }, 4000);
 
     // Clean up the interval when the component unmounts
 

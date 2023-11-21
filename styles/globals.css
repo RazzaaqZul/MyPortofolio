@@ -22,8 +22,8 @@ nav {
   list-style: none;
   border-style: solid;
   font-weight: 600;
-  position: -webkit-sticky; /* For browser that only support -webkit-sticky */
-  position: sticky; /* For modern browser */
+  /* position: -webkit-sticky; For browser that only support -webkit-sticky */
+  /* position: sticky; For modern browser */
   top: 0;
   background-color: white;
   padding: 10px 4px;
@@ -302,11 +302,11 @@ nav ul li:hover {
 }
 
 .animation_image {
-  animation: myAnima 7s ease 0s 1 normal forwards;
+  animation: myAnima 4s ease 0s 1 normal forwards;
 }
 
 .animation_image_exit {
-  animation: myAnimaExit 7s ease 0s 1 normal forwards;
+  animation: myAnimaExit 4s ease 0s 1 normal forwards;
 }
 
 @keyframes myAnimaExit {
@@ -320,7 +320,7 @@ nav ul li:hover {
   50% {
     opacity: 1;
   }
-  80% {
+  90% {
     opacity: 1;
   }
 
@@ -340,7 +340,7 @@ nav ul li:hover {
   50% {
     opacity: 1;
   }
-  80% {
+  90% {
     opacity: 1;
   }
 
@@ -375,4 +375,37 @@ nav ul li:hover {
     transform: scaleY(1);
     transform-origin: 100% 0%;
   }
+}
+
+.bg_scroll {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(
+    360deg,
+    rgba(219, 253, 228, 0) 0%,
+    rgba(173, 255, 228, 0.41) 40.77%,
+    #ceeaf5 70%
+  );
+  animation: animNav 600ms ease 0s 1 normal forwards;
+}
+
+@keyframes animNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg_scroll_mobile {
+  background: linear-gradient(
+    0deg,
+    rgba(219, 253, 228, 0) 0%,
+    rgba(173, 255, 228, 0.41) 24.38%,
+    #c2efff 88.13%,
+    rgba(232, 249, 255, 0.36) 100%
+  );
 }

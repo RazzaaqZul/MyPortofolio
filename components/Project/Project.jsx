@@ -12,7 +12,7 @@ const Project = () => {
 
   return (
     <>
-      <div className="font-bold text-[3rem] max-sm:text-[2rem]">
+      <div className="font-bold text-[3rem] max-sm:text-2xl max-sm:justify-center max-sm:flex max-sm:mb-2">
         Latest Projects
       </div>
       <div className="container_card mt-[2%]  flex justify-center items-center gap-8 flex-wrap ...">
