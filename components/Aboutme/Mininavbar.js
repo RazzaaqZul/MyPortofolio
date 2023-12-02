@@ -5,7 +5,7 @@ export const MININAVBAR = [
     itemList: [
       {
         activity: "FrontEnd Developer (Sobat Dev)",
-        date: "Apr 2023 - Present",
+        date: "Apr 2023 - Dec 2023",
       },
       {
         activity: "FrontEnd Developer Intern (BCC)",
@@ -13,7 +13,7 @@ export const MININAVBAR = [
       },
       {
         activity: "Staff of Human Resource Development (KBMTI)",
-        date: "Jan 2022 - Des 2022",
+        date: "Jan 2022 - Dec 2022",
       },
     ],
   },

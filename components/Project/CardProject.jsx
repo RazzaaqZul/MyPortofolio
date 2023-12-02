@@ -20,7 +20,7 @@ const CardProject = ({ name, image, language, link, deploy }) => {
 
   return (
     <div>
-      <div className="hover:shadow-2xl hover:-translate-y-2 hover:shadow-amber-300 duration-200 ... container_card bg-neutral-50 shadow-2xl  w-[100%] h-[450px] flex justify-center items-center flex-col px-10 rounded-2xl gap-4 ...">
+      <div className="hover:shadow-2xl hover:-translate-y-2 hover:shadow-amber-300 duration-200 ... container_card bg-neutral-50 shadow-2xl  max-w-[410px] w-[100%] h-[450px] flex justify-center items-center flex-col px-10 rounded-2xl gap-4 ...">
         <div className="image_card ">
           <Image
             src={image[imageIndex].src}

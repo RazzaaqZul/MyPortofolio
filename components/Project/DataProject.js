@@ -69,26 +69,14 @@ export const DATAPROJECTS = [
     image: [
       {
         id: 1,
-        src: "/image/EasyMeal/easy_meal_1.jpeg",
+        src: "/image/Promptopia/promptopia_(1).png",
       },
       {
         id: 2,
-        src: "/image/EasyMeal/easy_meal_(1).png",
-      },
-      {
-        id: 3,
-        src: "/image/EasyMeal/easy_meal_(2).png",
-      },
-      {
-        id: 4,
-        src: "/image/EasyMeal/easy_meal_(3).png",
-      },
-      {
-        id: 5,
-        src: "/image/EasyMeal/easy_meal_(4).png",
+        src: "/image/Promptopia/promptopia_(2).png",
       },
     ],
-    language: "HTML, CSS, TailwindCSS, JavaScript, React.js",
+    language: "HTML, CSS, TailwindCSS, JavaScript, Next.js, MongoDB",
     link: "https://github.com/RazzaaqZul/bcc-project-FE",
     deploy: "",
   },

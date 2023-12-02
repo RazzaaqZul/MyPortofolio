@@ -52,9 +52,11 @@ const AboutMe = () => {
         <div className="container_descAboutMe basis-3/5 text-justify font-medium text-neutral-400 text-lg max-w-[100%] relative bottom-4 ...  max-lg:mt-[2%]">
           Hello I’m Razzaaq, an undergraduate student at Brawijaya University
           majoring in Information Technology, in the Faculty of Computer
-          Science. I’m a Frontend Enthusiast who will develop a website with
-          TailwindCSS and React.js or Next.js. I enjoy challenges,
-          problem-solving, and am a fast learner to further develop my skills.
+          Science. I’m a Frontend Enthusiast and have experience working as a
+          Frontend Developer in two communities. This experience has resulted in
+          the development of two projects using my programming skills, such as
+          Javascript, React.js, Next.js, and TailwindCSS. I've strong
+          problem-solving abilities, collaboration, and am a fast learner.
         </div>
       </div>
       <h1 className="font-bold flex justify-center items-center text-xl mt-10">
